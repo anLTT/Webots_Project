@@ -1,0 +1,62 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.37369058868036825 0.8838546781727402 0.28134720862998014 1.3891798745083948
+  position 1.1445750689989616 0.780814966389294 0.39335654700634437
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 0 -1 0 0.0458149
+  floorSize 2 2
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+Solid {
+  translation 0.295041 0.0496918 0.271526
+  rotation -0.7125051370343879 0.5975117881859633 -0.36785335757393967 2.159470852032216
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "C:/Users/神鹰/Desktop/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3991880899449216409&skey=@crypt_2190dba4_6bb389b768a3b840d84dea29f016ae5e&mmweb_appid=wx_webfilehelper.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.05
+        radius 0.05
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.05
+    radius 0.05
+  }
+  physics Physics {
+  }
+}
+WoodenBox {
+  translation -0.0420911 0.0500002 -0.163814
+  rotation 1.854909999992549e-06 -0.999999999995983 2.143249999991391e-06 -1.950395307179586
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.345226 0.05 0.370619
+  rotation -2.346409999993429e-06 0.9999999999971996 -3.089109999991349e-07 -2.8797953071795863
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  translation 0.022356407850033996 -3.958877098993868e-05 -0.09290940750468113
+  rotation 0.0013037374972988975 0.999998693467631 0.0009556838226956133 -1.536953721440724
+  controller "my_avoid_obstacle"
+}

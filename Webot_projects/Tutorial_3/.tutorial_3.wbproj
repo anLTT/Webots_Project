@@ -4,8 +4,7 @@ simulationViewPerspectives: 000000ff0000000100000002000001530000050d010000000201
 sceneTreePerspectives: 000000ff0000000100000002000000c0000000fa0100000002010000000200
 maximizedDockId: -1
 centralWidgetVisible: 1
-projectionMode: PERSPECTIVE
 orthographicViewHeight: 1
-textFiles: 0 "Tutorial_1/controllers/my_controller/my_controller.c"
-globalOptionalRendering: CoordinateSystem
+textFiles: 1 "Tutorial_1/controllers/my_controller/my_controller.c" "controllers/my_avoid_obstacle/my_avoid_obstacle.c"
 consoles: Console:All:All
+renderingDevicePerspectives: e-puck:camera;1;1;0;0
