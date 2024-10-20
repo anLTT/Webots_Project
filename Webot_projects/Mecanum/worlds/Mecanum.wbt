@@ -1,0 +1,188 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "InteriorWheelMat"
+      coulombFriction [
+        0, 2, 0
+      ]
+      frictionRotation -0.786 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+    ContactProperties {
+      material1 "ExteriorWheelMat"
+      coulombFriction [
+        0, 2, 0
+      ]
+      frictionRotation 0.786 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.16739958399125587 0.8760900789132664 0.4521543463346351 2.5008026035584967
+  position 1.8367133782805958 1.9780408077577563 -1.0361702112842694
+}
+TexturedBackgroundLight {
+}
+TexturedBackground {
+}
+Floor {
+}
+Robot {
+  translation 1.1186435980192395 0.09695847025333913 3.965109291344143e-13
+  rotation -1.5069860307170751e-07 3.3929327389158765e-05 -0.9999999994243892 -2.297833713815321e-08
+  children [
+    DEF DO Group {
+      children [
+        DEF LF_Wheel HingeJoint {
+          jointParameters HingeJointParameters {
+            position 22.39999897182903
+            anchor 0.28 -0.05 0.15
+          }
+          device [
+            RotationalMotor {
+              name "LF_Motor"
+            }
+          ]
+          endPoint Solid {
+            translation 0.28 -0.05 0.15
+            rotation -0.6996290565769824 -0.6996283432206472 -0.14504952449261674 2.853502511798123
+            children [
+              InteriorWheel {
+              }
+            ]
+            contactMaterial "InteriorWheelMat"
+            boundingObject Cylinder {
+              height 0.1
+              radius 0.05
+            }
+            physics Physics {
+            }
+            linearVelocity 0.24969924407447588 -1.022343966284748e-08 -9.120670522664876e-11
+            angularVelocity 5.0000000000053015 1.1555541142503033e-07 -2.9212100705971974e-08
+          }
+        }
+        DEF RB_Wheel HingeJoint {
+          jointParameters HingeJointParameters {
+            position 22.399998971821447
+            anchor -0.28 -0.05 -0.15
+          }
+          device [
+            RotationalMotor {
+              name "RB_Motor"
+            }
+          ]
+          endPoint Solid {
+            translation -0.28 -0.05 -0.15
+            rotation -0.6996290565772653 -0.69962834322093 -0.1450495244898869 2.8535025118034705
+            children [
+              InteriorWheel {
+              }
+            ]
+            name "solid(1)"
+            contactMaterial "InteriorWheelMat"
+            boundingObject Cylinder {
+              height 0.1
+              radius 0.05
+            }
+            physics Physics {
+            }
+            linearVelocity 0.24969924410319935 1.0223552350608543e-08 -6.047812640565167e-11
+            angularVelocity 5.000000000013102 1.1555078166574749e-07 -2.921493190901377e-08
+          }
+        }
+        DEF LB_Wheel HingeJoint {
+          jointParameters HingeJointParameters {
+            position -22.399998971828996
+            anchor 0.28 -0.05 -0.15
+          }
+          device [
+            RotationalMotor {
+              name "LB_Motor"
+            }
+          ]
+          endPoint Solid {
+            translation 0.28 -0.05 -0.15
+            rotation 0.6996294040787812 0.699628690722785 -0.14504617218627722 2.8535090782596755
+            children [
+              ExteriorWheel {
+              }
+            ]
+            name "solid(2)"
+            contactMaterial "ExteriorWheelMat"
+            boundingObject Cylinder {
+              height 0.1
+              radius 0.05
+            }
+            physics Physics {
+            }
+            linearVelocity 0.24969924407349015 -1.0223447045361586e-08 8.821688674349735e-11
+            angularVelocity -5.000000000005342 -1.1555073871291386e-07 -2.9220535044059092e-08
+          }
+        }
+        DEF RF_Wheel HingeJoint {
+          jointParameters HingeJointParameters {
+            position -22.399998971821454
+            anchor -0.28 -0.05 0.15
+          }
+          device [
+            RotationalMotor {
+              name "RF_Motor"
+            }
+          ]
+          endPoint Solid {
+            translation -0.28 -0.05 0.15
+            rotation 0.6996294040790533 0.6996286907230571 -0.14504617218365118 2.8535090782648194
+            children [
+              ExteriorWheel {
+              }
+            ]
+            name "solid(3)"
+            contactMaterial "ExteriorWheelMat"
+            boundingObject Cylinder {
+              height 0.1
+              radius 0.05
+            }
+            physics Physics {
+            }
+            linearVelocity 0.24969924410418662 1.0223556548169482e-08 5.959527592551822e-11
+            angularVelocity -5.000000000013142 -1.1554608723740599e-07 -2.9223405343276172e-08
+          }
+        }
+        DEF BODY Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "C:/Users/神鹰/Pictures/微信图片_20231124131638.jpg"
+              ]
+            }
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.1 0.5
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "my_mecanum"
+  controllerArgs [
+    "000153515"
+    "arg2"
+    "arg3"
+  ]
+  linearVelocity 0.24969924604979482 5.6570569399952514e-14 -9.694857074732316e-13
+  angularVelocity -2.0883344568884428e-14 2.373252795704885e-12 -3.7960414584744546e-08
+}

@@ -1,0 +1,169 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "HUA"
+      coulombFriction [
+        0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.21298422245345594 0.9562464397532694 0.2005753410693694 1.5246666091680614
+  position 1.6512032693392125 0.839646630933189 0.30666874216223705
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 0 -1 0 0.0458149
+  floorSize 2 2
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+Solid {
+  translation -0.3331074529992077 0.029898913601504207 0.1416776634100117
+  rotation 0.19383042206323017 -0.2603381401748257 0.9458614170443272 1.6435640244636938
+  children [
+    DEF YL Group {
+      children [
+        Transform {
+          translation 0 0.05 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.05 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            baseColorMap ImageTexture {
+              url [
+                "C:/Users/神鹰/Desktop/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3991880899449216409&skey=@crypt_2190dba4_6bb389b768a3b840d84dea29f016ae5e&mmweb_appid=wx_webfilehelper.jpg"
+              ]
+            }
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject USE YL
+  physics Physics {
+  }
+  linearVelocity 0.0032827494806021325 -3.7030469681802255e-15 -0.046231053235599624
+  angularVelocity -1.5410351078533209 5.573335054222333e-15 -0.10942498268673774
+}
+Solid {
+  translation -0.8926797447591972 0.029374619294228434 -0.2947241572097746
+  rotation 0.536568106940045 -0.6932709905882173 -0.48111329250355195 -2.7886408205342024
+  children [
+    DEF YL Group {
+      children [
+        Transform {
+          translation 0 0.05 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.666667 0
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.05 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.666667 0
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            baseColorMap ImageTexture {
+              url [
+                "C:/Users/神鹰/Desktop/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3991880899449216409&skey=@crypt_2190dba4_6bb389b768a3b840d84dea29f016ae5e&mmweb_appid=wx_webfilehelper.jpg"
+              ]
+            }
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(1)"
+  contactMaterial "HUA"
+  boundingObject USE YL
+  physics Physics {
+  }
+  linearVelocity -0.07462540492139308 0.008478194446864679 -0.13837442666081767
+  angularVelocity 0.7449311644597743 -6.2084419680367775 -0.6339106732508379
+}
+WoodenBox {
+  translation -0.0420911 0.0500002 -0.163814
+  rotation 1.854909999992549e-06 -0.999999999995983 2.143249999991391e-06 -1.950395307179586
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.345226 0.05 0.370619
+  rotation -2.346409999993429e-06 0.9999999999971996 -3.089109999991349e-07 -2.8797953071795863
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 167.83227303243763
+  hidden position_0_1 175.0705090014942
+  hidden linearVelocity_0 -0.05966303829891728 3.814093545883793e-08 0.01977148917057107
+  hidden angularVelocity_0 0.0011435484892776265 1.2680280213536138e-05 0.0033940134757974366
+  hidden rotation_1 -1 0 0 4.469455045768378
+  hidden linearVelocity_1 -0.059679895324958133 -4.6019517447870403e-07 0.01977727267575273
+  hidden angularVelocity_1 0.9888603854260266 8.617716496787113e-06 2.9840005671735472
+  hidden rotation_2 1 0 0 0.8586795995342198
+  hidden linearVelocity_2 -0.05968012022280467 4.5167238138519456e-07 0.019777141035062125
+  hidden angularVelocity_2 0.9888604173934158 8.532762708594978e-06 2.984000564041252
+  translation -0.825230289304462 -3.193740493460592e-05 -0.47623877655903707
+  rotation -0.0007683454698313628 0.9999991371034713 0.00106556912094391 1.890789848710712
+  controller "my_avoid_obstacle"
+}
